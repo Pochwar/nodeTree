@@ -18,5 +18,9 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.get('nodes', 'NodeController.index')
+Route.get('nodes/:id', 'NodeController.show')
 Route.post('nodes', 'NodeController.store')
 Route.delete('nodes/:id', 'NodeController.destroy')
+
+Route.get('tree', 'TreeController.tree')
+Route.get('tree/random', 'TreeController.random')

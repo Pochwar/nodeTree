@@ -6,18 +6,30 @@ const { validate } = use('Validator')
 
 class NodeController {
 
-  async index ({ view }) {
-    const nodes = await Node.all()
+  async index ({ view, response }) {
+    const nodes = await await Node
+      .query()
+      .with('parent')
+      .fetch()
 
     return view.render('nodes.index', { nodes: nodes.toJSON() })
-    // return nodes.toJSON();
+  }
+
+  async show ({ params, response }) {
+    const node = await Node
+      .query()
+      .where('id', params.id)
+      .with('parent')
+      .with('children')
+      .fetch()
+
+    return response.json(node)
   }
 
   async store ({ request, response, session }) {
     // validate form input
     const validation = await validate(request.all(), {
       label: 'required|min:3|max:255',
-      parent: 'required'
     })
 
     // show error messages upon validation fail
@@ -31,7 +43,7 @@ class NodeController {
     // persist to database
     const node = new Node()
     node.label = request.input('label')
-    node.pid = request.input('parent')
+    node.pid = request.input('parent') ? request.input('parent') : null
     await node.save()
 
     // Fash success message to session
@@ -49,6 +61,8 @@ class NodeController {
 
     return response.redirect('back')
   }
+
+
 }
 
 module.exports = NodeController

@@ -18,6 +18,7 @@
                 </div>
                 <div class="control is-expanded">
                     <select class="input" name="parent" id="parent">
+                        <option value="">Parent : -</option>
                         @each(node in nodes)
                             <option value="{{ node.id }}">Parent : {{ node.label }}</option>
                         @endeach
@@ -64,7 +65,7 @@
                             {{ node.label }}
                         </td>
                         <td>
-                            {{ node.pid ? node.pid : '-' }}
+                            {{ node.parent ? node.parent.label : '-' }}
                         </td>
                         <td>
                             <form action="{{ 'nodes/' + node.id + '?_method=DELETE' }}" method="POST">
