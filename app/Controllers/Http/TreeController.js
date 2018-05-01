@@ -18,24 +18,24 @@ class TreeController {
   async randomPath () {
     // get tree
     let tree = await this.tree()
-    tree = tree.toJSON();
+    tree = tree.toJSON()
 
     // instanciate path
     const path = []
 
-    let l = true;
-    let c = tree
-    while (l) {
-      const i = _.random(0, _.size(c)-1)
+    let loop = true;
+    let current = tree
+    while (loop) {
+      const i = _.random(0, _.size(current)-1)
       path.push({
-        id : c[i].id,
-        label : c[i].label,
+        id : current[i].id,
+        label : current[i].label,
       })
 
-      if (_.size(c[i].children) != 0) {
-        c = c[i].children
+      if (_.size(current[i].children) != 0) {
+        current = current[i].children
       } else {
-        l = false
+        loop = false
       }
     }
 
