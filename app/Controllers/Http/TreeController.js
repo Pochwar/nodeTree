@@ -15,12 +15,31 @@ class TreeController {
     return rootNodes
   }
 
-  async random () {
-    const tree = await this.tree()
+  async randomPath () {
+    // get tree
+    let tree = await this.tree()
+    tree = tree.toJSON();
 
-    console.log(_.random(1, _.size(tree.rows)))
+    // instanciate path
+    const path = []
 
-    return tree.rows[0]
+    let l = true;
+    let c = tree
+    while (l) {
+      const i = _.random(0, _.size(c)-1)
+      path.push({
+        id : c[i].id,
+        label : c[i].label,
+      })
+
+      if (_.size(c[i].children) != 0) {
+        c = c[i].children
+      } else {
+        l = false
+      }
+    }
+
+    return path
   }
 }
 
