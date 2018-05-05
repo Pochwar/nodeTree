@@ -20,6 +20,14 @@ const Route = use('Route')
  *******************/
 Route.on('/').render('welcome')
 
+/*********************
+ *       VIDEOS      *
+ *********************/
+Route.get('videos', 'VideoController.index')
+Route.get('videos/:id', 'VideoController.show')
+Route.post('videos', 'VideoController.store')
+Route.delete('videos/:id', 'VideoController.destroy')
+
 /********************
  *       NODES      *
  ********************/

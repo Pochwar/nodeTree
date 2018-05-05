@@ -8,7 +8,7 @@ const _ = use('lodash')
 class NodeController {
 
   async index ({ view, response }) {
-    const nodes = await await Node
+    const nodes = await Node
       .query()
       .with('parent')
       .fetch()
@@ -30,7 +30,7 @@ class NodeController {
   async store ({ request, response, session }) {
     // validate form input
     const validation = await validate(request.all(), {
-      label: 'required|min:3|max:255',
+      label: 'required|min:3|max:140',
     })
 
     // show error messages upon validation fail
