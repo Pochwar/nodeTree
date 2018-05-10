@@ -18,7 +18,7 @@ const Route = use('Route')
 /*******************
  *       HOME      *
  *******************/
-Route.on('/').render('welcome')
+Route.get('/', 'HomeController.index')
 
 /*********************
  *       VIDEOS      *

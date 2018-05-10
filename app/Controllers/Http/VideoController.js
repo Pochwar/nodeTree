@@ -63,7 +63,13 @@ class VideoController {
   async update () {
   }
 
-  async destroy () {
+  async destroy ({ params, session, response }) {
+    let video = await Video.find(params.id)
+    await video.delete()
+
+    session.flash({ notification: 'Video deleted' })
+
+    return response.redirect('back')
   }
 }
 

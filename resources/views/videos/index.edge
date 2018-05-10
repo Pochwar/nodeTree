@@ -63,7 +63,7 @@
                             {{ video.path }}
                         </td>
                         <td>
-                            <form action="{{ 'videos/' + node.id + '?_method=DELETE' }}" method="POST">
+                            <form action="{{ 'videos/' + video.id + '?_method=DELETE' }}" method="POST">
                                 {{ csrfField() }}
 
                                 <button type="submit" class="button is-danger is-outlined">
