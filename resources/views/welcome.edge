@@ -5,11 +5,8 @@
 @endsection
 
 @section('scripts')
-  {{ script('js/videos') }}
 @endsection
 
 @section('content')
-  <video id="videoPlayer" autoplay autobuffer controls></video>
-  
-  {{videos}}
+  <video id="videoPlayer" src="{{ montage }}" autoplay autobuffer controls></video>
 @endsection
