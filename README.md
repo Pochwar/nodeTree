@@ -7,6 +7,21 @@ Differents media will be implemented as objects of the tree :
 - Images - TODO
 - Text - TODO
 
+## Todo
+
+
+### Nodes
+* Update Node model so that nodes could have multiple parents
+* Add graphic interface to manage nodes (VueJS ?)
+* Handle node attachment to content (Video, Images, Text)
+
+### Tree
+* Rebuild depending on Nodes changes
+
+### General
+* Handle users
+* Handle project per users
+
 ## Info
 Using [AdonisJs](https://adonisjs.com) framework
 

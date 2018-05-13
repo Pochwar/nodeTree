@@ -19,14 +19,28 @@ class Node extends Model {
     return ['labelid']
   }
 
-  // declare parent relashionship
-  parent() {
-    return this.hasOne('App/Models/Node', 'pid', 'id')
+  parents () {
+    return this
+      .belongsToMany(
+        'App/Models/Node',
+        'child',
+        'parent',
+        'id',
+        'id'
+      )
+      .pivotTable('nodes_relations')
   }
 
-  // declare children relashionship
-  children() {
-    return this.hasMany('App/Models/Node', 'id', 'pid')
+  children () {
+    return this
+      .belongsToMany(
+        'App/Models/Node',
+        'parent',
+        'child',
+        'id',
+        'id'
+      )
+      .pivotTable('nodes_relations')
   }
 
   // computed attribute labelid

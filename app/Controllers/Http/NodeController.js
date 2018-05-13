@@ -10,8 +10,10 @@ class NodeController {
   async index ({ view, response }) {
     const nodes = await Node
       .query()
-      .with('parent')
+      .with('parents')
       .fetch()
+
+    return nodes.toJSON()
 
     return view.render('nodes.index', { nodes: nodes.toJSON() })
   }
@@ -93,7 +95,7 @@ class NodeController {
       await node.delete()
     })
 
-    // Fash success message to session
+    // Flash success message to session
     session.flash({ notification: 'Node and all children deleted' })
 
     return response.redirect('back')
