@@ -1,12 +1,16 @@
 {
   "name": "NodeTree",
-  "version": "0.1",
+  "version": "1.0.0",
   "adonis-version": "4.1.0",
   "description": "A tree random browser project - Based on AdonisJS",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace test",
+    "fdev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "fwatch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "fhot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "fproduction": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "keywords": [
     "adonisjs",
@@ -28,10 +32,13 @@
     "@adonisjs/session": "^1.0.23",
     "@adonisjs/shield": "^1.0.6",
     "@adonisjs/validator": "^5.0.3",
+    "laravel-mix": "^2.1.11",
     "mysql": "^2.15.0",
     "video-stitch": "^1.5.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "axios": "^0.18.0"
+  },
   "autoload": {
     "App": "./app"
   }

@@ -8,6 +8,10 @@ let videoConcat = videoStitch.concat
 
 class HomeController {
   async index ({view}) {
+    return view.render('home')
+  }
+
+  async project ({view}) {
     // get all videos
     const videos = await Video.all()
 
@@ -37,7 +41,7 @@ class HomeController {
         console.error("error: ", e)
       })
 
-    return view.render('welcome', {montage: montage.substr(6)})
+    return view.render('project', {montage: montage.substr(6)})
   }
 }
 
