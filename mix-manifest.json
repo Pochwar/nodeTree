@@ -1,4 +1,10 @@
 {
     "/public/js/app.js": "/public/js/app.js",
-    "/public/css/app.css": "/public/css/app.css"
+    "/public/css/app.css": "/public/css/app.css",
+    "/public/css/graph-creator.css": "/public/css/graph-creator.css",
+    "/public/img/download-icon.png": "/public/img/download-icon.png",
+    "/public/img/thumbnail.png": "/public/img/thumbnail.png",
+    "/public/img/trash-icon.png": "/public/img/trash-icon.png",
+    "/public/img/upload-icon.png": "/public/img/upload-icon.png",
+    "/public/js/graph-creator.js": "/public/js/graph-creator.js"
 }

@@ -15,3 +15,6 @@ database/development.sqlite
 
 # PhpStorm files
 .idea/*
+
+# Builded front scripts
+public

@@ -14,6 +14,16 @@ let mix = require('laravel-mix');
 mix.disableSuccessNotifications()
   .js('resources/assets/js/app.js', 'public/js')
   .sass('resources/assets/sass/app.scss', 'public/css')
+  .copy('node_modules/directed-graph-creator/resources/css/graph-creator.css', 'public/css')
+  .copy('node_modules/directed-graph-creator/resources/img/download-icon.png', 'public/img')
+  .copy('node_modules/directed-graph-creator/resources/img/thumbnail.png', 'public/img')
+  .copy('node_modules/directed-graph-creator/resources/img/trash-icon.png', 'public/img')
+  .copy('node_modules/directed-graph-creator/resources/img/upload-icon.png', 'public/img')
+  .combine([
+    'node_modules/d3/d3.js',
+    'node_modules/file-saver/FileSaver.js',
+    'node_modules/directed-graph-creator/resources/js/graph-creator.js'
+  ], 'public/js/graph-creator.js')
 
 // Full API
 // mix.js(src, output);
