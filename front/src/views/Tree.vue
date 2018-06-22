@@ -28,12 +28,11 @@ export default {
       errors: []
     }
   },
-  created () {
+  mounted () {
     this.$loadScript('js/graph-creator.js')
       .then(() => {
         axios.get(`${process.env.VUE_APP_API_URL}/test`)
           .then(response => {
-
             var jsonObj = response.data
             var thisGraph = window.graphCreator
 
