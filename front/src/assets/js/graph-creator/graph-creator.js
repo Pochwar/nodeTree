@@ -14,6 +14,8 @@ document.onload = (function(d3, saveAs, Blob, undefined){
     var thisGraph = this;
         thisGraph.idct = 0;
 
+    window.graphCreator = thisGraph;
+
     thisGraph.nodes = nodes || [];
     thisGraph.edges = edges || [];
 
@@ -126,26 +128,9 @@ document.onload = (function(d3, saveAs, Blob, undefined){
       saveAs(blob, "mydag.json");
     });
 
-
     // handle uploaded data
     d3.select("#upload-input").on("click", function(){
-      // document.getElementById("hidden-file-upload").click();
-      axios.get(`http://127.0.0.1:2440/test`)
-        .then(response => {
-          // JSON responses are automatically parsed.
-          var jsonObj = response.data
-
-          thisGraph.deleteGraph(true);
-          thisGraph.nodes = jsonObj.nodes;
-          thisGraph.setIdCt(jsonObj.nodes.length + 1);
-          var newEdges = jsonObj.edges;
-          newEdges.forEach(function(e, i){
-            newEdges[i] = {source: thisGraph.nodes.filter(function(n){return n.id == e.source;})[0],
-              target: thisGraph.nodes.filter(function(n){return n.id == e.target;})[0]};
-          });
-          thisGraph.edges = newEdges;
-          thisGraph.updateGraph();
-        })
+      document.getElementById("hidden-file-upload").click();
     });
     d3.select("#hidden-file-upload").on("change", function(){
       if (window.File && window.FileReader && window.FileList && window.Blob) {

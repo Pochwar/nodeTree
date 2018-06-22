@@ -12,7 +12,7 @@ class HomeController {
   }
 
   async test ({response}) {
-    return response.json({"nodes":[{"id":2,"title":"wesh","x":512,"y":155},{"id":3,"title":"alors","x":826,"y":155}],"edges":[{"source":2,"target":3}]})
+    return response.json({"nodes":[{"id":2,"title":"welsh","x":512,"y":155},{"id":3,"title":"alürs","x":826,"y":155}],"edges":[{"source":2,"target":3}]})
   }
 
   async project ({view}) {
