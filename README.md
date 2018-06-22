@@ -61,17 +61,17 @@ Requirements :
 
 * Got to `front` folder
 * Run `npm install` to install dependencies
+* Copy `.env.example` to `.env.local`
 
 ### Usage
 
 * Run `npm run serve` to serve front
 
-Front will be available at [http://127.0.0.1:2444](http://127.0.0.1:2444)
+Front will be available at [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 
 ## Todo
 
-- use .env in front to set api url
 - change port in front
 - combine scripts (d3, file-saver, axios)
 

@@ -23,8 +23,20 @@
       <file leaf-file-name="Tree.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/views/Tree.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="84">
               <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="331">
+                <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -43,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/.env">
+      <file leaf-file-name=".env.local" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/.env.local">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="37" selection-start-column="37" selection-end-column="37" />
+              <caret selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env.example" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/.env.example">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="37" lean-forward="true" selection-start-column="16" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -66,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloWorld.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HelloWorld.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/components/HelloWorld.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="315">
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -153,8 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/videos.js" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.edge" />
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/database/migrations/1526230474282_remove_pid_from_node_schema.js" />
         <option value="$PROJECT_DIR$/database/migrations/1526230454641_create_nodes_relations_schema.js" />
@@ -200,10 +219,12 @@
         <option value="$PROJECT_DIR$/front/src/views/Tree.vue" />
         <option value="$PROJECT_DIR$/front/src/main.js" />
         <option value="$PROJECT_DIR$/back/config/cors.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/front/public/js/graph-creator.js" />
         <option value="$PROJECT_DIR$/front/.env" />
+        <option value="$PROJECT_DIR$/front/.env.local" />
+        <option value="$PROJECT_DIR$/front/.env.example" />
         <option value="$PROJECT_DIR$/front/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -266,6 +287,13 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodeTree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodeTree" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,12 +369,12 @@
       <workItem from="1529406711869" duration="1043000" />
       <workItem from="1529411724758" duration="4842000" />
       <workItem from="1529566485690" duration="18807000" />
-      <workItem from="1529655799234" duration="972000" />
+      <workItem from="1529655799234" duration="1376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119167000" />
+    <option name="totallyTimeSpent" value="119571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="709" extended-state="6" />
@@ -388,7 +416,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/layout.edge" />
     <entry file="file://$PROJECT_DIR$/start/routes.js" />
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js" />
     <entry file="file://$PROJECT_DIR$/back/mix-manifest.json">
@@ -442,6 +469,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -529,16 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="100">
-            <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/start/kernel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -566,13 +586,6 @@
     <entry file="file://$PROJECT_DIR$/front/.eslintrc.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/views/Tree.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/babel.config.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -590,20 +603,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/.env.local">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" lean-forward="true" selection-start-column="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/HelloWorld.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" selection-start-line="39" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="315">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/views/Tree.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="331">
+            <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
