@@ -1,0 +1,37 @@
+{
+  "name": "NodeTree",
+  "version": "1.0.0",
+  "adonis-version": "4.1.0",
+  "description": "A tree random browser project - Based on AdonisJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ace test"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-app"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.1",
+    "@adonisjs/auth": "^3.0.4",
+    "@adonisjs/bodyparser": "^2.0.2",
+    "@adonisjs/cors": "^1.0.6",
+    "@adonisjs/drive": "^1.0.2",
+    "@adonisjs/fold": "^4.0.7",
+    "@adonisjs/framework": "^5.0.5",
+    "@adonisjs/ignitor": "^2.0.6",
+    "@adonisjs/lucid": "^5.0.3",
+    "@adonisjs/session": "^1.0.23",
+    "@adonisjs/shield": "^1.0.6",
+    "@adonisjs/validator": "^5.0.3",
+    "mysql": "^2.15.0",
+    "video-stitch": "^1.5.0"
+  },
+  "autoload": {
+    "App": "./app"
+  }
+}
