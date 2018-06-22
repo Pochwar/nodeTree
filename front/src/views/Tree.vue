@@ -31,12 +31,8 @@ export default {
   created () {
     this.$loadScript('js/graph-creator.js')
       .then(() => {
-        // Script is loaded, do something
-        console.log('GRAPH3', window.graphCreator)
-
         axios.get(`${process.env.VUE_APP_API_URL}/test`)
           .then(response => {
-            console.log('DATA', response.data)
 
             var jsonObj = response.data
             var thisGraph = window.graphCreator
@@ -61,11 +57,9 @@ export default {
             this.errors.push(e)
           })
       })
-      .catch(() => {
-        // Failed to fetch script
+      .catch(e => {
+        this.errors.push(e)
       })
-  },
-  methods: {
   }
 }
 </script>

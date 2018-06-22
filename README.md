@@ -61,6 +61,7 @@ Requirements :
 
 * Got to `front` folder
 * Run `npm install` to install dependencies
+* Run `npm run dev` to compile assets
 * Copy `.env.example` to `.env.local`
 
 ### Usage
