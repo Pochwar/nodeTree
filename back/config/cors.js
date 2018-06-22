@@ -18,7 +18,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: Env.get('FRONT_URL', 'http://localhost:8080'),
+  origin: Env.get('FRONT_URL', ''),
 
   /*
   |--------------------------------------------------------------------------

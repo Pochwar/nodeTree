@@ -24,28 +24,34 @@ Requirements :
 
 * Got to `back` folder
 
-* Install dependencies
-```
-npm install
-```
+* Run `npm install` to install dependencies
 * Copy `.env.example` to `.env` and set your database credentials
-* Start migrations
-```
-adonis migration:run
-```
+* Run `adonis migration:run` to start migrations
 
 ### Usage
 
-Run the following command to launch the server.
-```js
-adonis serve
-```
+Run `adonis serve` to launch the server.
+
 Server will be available at [http://127.0.0.1:2440](http://127.0.0.1:2440)
 
 ### Routes
-* `/` : home.
-* `/nodes` : manage nodes.
-* `/videos` : manage videos.
+* `GET` `/` : home.
+
+
+* `GET` `/tree` : view tree.
+* `GET` `/tree/random-path` : view a random path of the tree.
+
+
+* `GET` `/nodes` : view nodes and edges.
+* `GET` `/nodes/:id` : view specific node.
+* `POST` `/nodes` : create new node.
+* `DELETE` `/nodes/:id` : delete specific node.
+
+
+* `GET` `/videos` : view videos.
+* `GET` `/videos/:id` : view specific video.
+* `POST` `/videos` : create new video.
+* `DELETE` `/video/:id` : delete specific node.
 
 
 ## Front
@@ -68,21 +74,13 @@ Requirements :
 
 * Run `npm run serve` to serve front
 
-Front will be available at [http://127.0.0.1:8080](http://127.0.0.1:8080)
+Front will be available at [http://localhost:2444](http://localhost:2444)
 
 
 ## Todo
 
-- change port in front
-- combine scripts (d3, file-saver, axios)
-
 ### Nodes
-* Update Node model so that nodes could have multiple parents
-* Add graphic interface to manage nodes (VueJS ?)
-* Handle node attachment to content (Video, Images, Text)
-
-### Tree
-* Rebuild depending on Nodes changes
+* Handle node attachment to content (Videos, Images, Texts, Sounds)
 
 ### General
 * Handle users

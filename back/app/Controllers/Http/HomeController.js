@@ -8,7 +8,7 @@ let videoConcat = videoStitch.concat
 
 class HomeController {
   async index ({response}) {
-    return response.json({})
+    return response.json({message: "welcome"})
   }
 
   async project ({view}) {

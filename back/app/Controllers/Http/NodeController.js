@@ -33,7 +33,7 @@ class NodeController {
     const node = await Node
       .query()
       .where('id', params.id)
-      .with('parent')
+      .with('parents')
       .with('children')
       .fetch()
 

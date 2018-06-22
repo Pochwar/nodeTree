@@ -27,7 +27,7 @@ class TreeController {
   async randomPath () {
     // get tree
     let tree = await this.tree()
-    tree = tree.toJSON()
+    tree = tree
 
     // instanciate path
     const path = []
