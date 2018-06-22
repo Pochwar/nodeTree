@@ -11,12 +11,12 @@ class Node extends Model {
 
   // set visible attributes
   static get visible () {
-    return ['id', 'label', 'labelid']
+    return ['id', 'title', 'x', 'y']
   }
 
   // declare computed attribute
   static get computed () {
-    return ['labelid']
+    return ['x', 'y']
   }
 
   parents () {
@@ -43,9 +43,14 @@ class Node extends Model {
       .pivotTable('nodes_relations')
   }
 
-  // computed attribute labelid
-  getLabelid({id, label}) {
-    return `${id} - ${label}`
+  // computed attribute x
+  getX({x_coord}) {
+    return x_coord
+  }
+
+  // computed attribute x
+  getY({y_coord}) {
+    return y_coord
   }
 }
 

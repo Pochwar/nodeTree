@@ -1,6 +1,7 @@
 'use strict'
 
 const Node = use('App/Models/Node')
+const Database = use('Database')
 
 const { validate } = use('Validator')
 const _ = use('lodash')
@@ -8,12 +9,24 @@ const _ = use('lodash')
 class NodeController {
 
   async index ({ response }) {
-    const nodes = await Node
-      .query()
-      .with('parents')
-      .fetch()
+    const nodes = await Node.all()
 
-    return response.json({nodes: nodes.toJSON()})
+    const rawEdges = await Database
+      .raw('SELECT * FROM nodes_relations')
+
+    const edges = []
+
+    for (var key in rawEdges[0]) {
+      edges.push({
+        source: rawEdges[0][key].parent,
+        target: rawEdges[0][key].child
+      })
+    }
+
+    return response.json({
+      nodes: nodes,
+      edges: edges
+    })
   }
 
   async show ({ params, response }) {

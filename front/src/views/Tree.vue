@@ -31,7 +31,7 @@ export default {
   mounted () {
     this.$loadScript('js/graph-creator.js')
       .then(() => {
-        axios.get(`${process.env.VUE_APP_API_URL}/test`)
+        axios.get(`${process.env.VUE_APP_API_URL}/nodes`)
           .then(response => {
             var jsonObj = response.data
             var thisGraph = window.graphCreator

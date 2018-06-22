@@ -6,7 +6,7 @@ class NodeSchema extends Schema {
   up () {
     this.create('nodes', (table) => {
       table.increments()
-      table.string('label')
+      table.string('title')
       table.integer('pid')
       table.timestamps()
     })

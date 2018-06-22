@@ -11,10 +11,6 @@ class HomeController {
     return response.json({})
   }
 
-  async test ({response}) {
-    return response.json({"nodes":[{"id":2,"title":"welsh","x":512,"y":155},{"id":3,"title":"alürs","x":826,"y":155}],"edges":[{"source":2,"target":3}]})
-  }
-
   async project ({view}) {
     // get all videos
     const videos = await Video.all()
